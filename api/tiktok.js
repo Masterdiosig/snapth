@@ -79,4 +79,4 @@ error: err.message
 }
 };
 
-module.exports = handler;
+export default handler;
