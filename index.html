@@ -13,12 +13,13 @@
     <div class="container">
       <h1>Unduh Video TikTok</h1>
       <p class="subtitle">Tidak ada logo – Tidak ada tanda air</p>
-      <form class="simple_form" name="formurl" method="post">
+      <!-- GỠ method="post" để không bị lỗi 405 -->
+      <form class="simple_form" name="formurl">
         <input type="text" name="td_url" id="hf_urli" placeholder="Tempel tautan TikTok..." required>
         <button type="submit" name="td_btn"><i class="fa fa-download"></i> Unduh</button>
       </form>
     </div>
   </div>
+  <script src="main.js"></script>
 </body>
 </html>
-<script src="main.js"></script>
