@@ -21,7 +21,7 @@ const handler = async (req, res) => {
 res.setHeader("Access-Control-Allow-Origin", "*");
 
 const { url } = req.body;
-if (!url) return res.status(400).json({ code: 1, message: "Thiếu URL" });
+if (!url) return res.status(400).json({ code: 1, message: "Kekurangan URL" });
 
 const finalUrl = await followRedirect(url);
 console.log("🔗 Final TikTok URL:", finalUrl);
@@ -39,7 +39,7 @@ headers: {
 });
 
 const data = response.data?.data || {};
-console.log("✅ API trả về:", data);
+console.log("✅ API kembali:", data);
 
 const videoHD = data.hdplay;
 const videoSD = data.play;
@@ -49,7 +49,7 @@ const audio = data.music;
 if (!videoHD && !videoSD && !videoWM && !audio) {
 return res.status(200).json({
 code: 2,
-message: "❌ Không lấy được video",
+message: "❌ Tidak bisa mendapatkan video",
 raw: data
 });
 }
@@ -57,9 +57,9 @@ raw: data
 return res.status(200).json({
 code: 0,
 data: [
-...(videoSD ? [{ url: videoSD, label: "Tải xuống không có hình mờ HD" }] : []),
-...(videoHD ? [{ url: videoHD, label: "Tải xuống với hình mờ HD" }] : []),
-...(audio ? [{ url: audio, label: "Tải nhạc" }] : [])
+...(videoSD ? [{ url: videoSD, label: "Unduh hd tanpa tanda air HD" }] : []),
+...(videoHD ? [{ url: videoHD, label: "Unduh dengan tanda air HD" }] : []),
+...(audio ? [{ url: audio, label: "Unduh musik" }] : [])
 ],
 meta: {
 thumbnail: data.cover,
@@ -68,10 +68,10 @@ author: data.author?.nickname || data.author?.unique_id || ""
 }
 });
 } catch (err) {
-console.error("🔥 Lỗi API:", err.message);
+console.error("🔥 Kesalahan API:", err.message);
 return res.status(500).json({
 code: 500,
-message: "Lỗi server khi gọi RapidAPI",
+message: "Kesalahan server saat memanggil RapidAPI",
 
 
 error: err.message
