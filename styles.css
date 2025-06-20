@@ -150,3 +150,18 @@ body {
 .download-app-btn:hover {
   background-color: #555;
 }
+
+
+.faq-item {
+  margin-bottom: 20px;
+  line-height: 1.6;
+}
+.chinh-sach
+a {
+  color: #007aff;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
