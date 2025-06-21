@@ -165,3 +165,10 @@ a {
 a:hover {
   text-decoration: underline;
 }
+
+
+body.is-app .header,
+body.is-app .footer,
+body.is-app .ads {
+  display: none !important;
+}
