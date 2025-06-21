@@ -14,12 +14,23 @@
 <header class="top-header">
   <div class="logo">Snapth<span class="dot-app">.top</span></div>
 
-
-<div class="header-controls">
-  <div class="language-selector">
-    <img src="https://flagcdn.com/id.svg" alt="Indonesia" class="flag-icon">
-    <span>Indonesia</span>
+  <!-- Language Selector -->
+<div class="language-dropdown">
+  <button class="language-btn">
+    <img id="selected-flag" src="https://flagcdn.com/id.svg" alt="Indonesia" class="flag-icon">
+    <span id="selected-lang">Indonesia</span>
     <span class="arrow">&#9662;</span>
+  </button>
+  <ul class="language-list">
+    <li onclick="changeLang('id')">
+      <img src="https://flagcdn.com/id.svg" class="flag-icon"> Indonesia
+    </li>
+    <li onclick="changeLang('en')">
+      <img src="https://flagcdn.com/gb.svg" class="flag-icon"> English
+    </li>
+  </ul>
+</div>
+
 
 
     <a href="https://yourappdownloadlink.com" class="download-app-btn" target="_blank">
