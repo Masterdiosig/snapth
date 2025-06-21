@@ -13,7 +13,7 @@ body {
 
 .hero_simple {
   padding: 60px 15px;
-  background: #0057d8;
+  background: #173157;
   text-align: center;
 }
 
@@ -39,7 +39,7 @@ body {
 .simple_form input {
   padding: 14px;
   font-size: 16px;
-  border: 1px solid #ccc;
+  border: 1px solid #dc0a0a;
   border-radius: 6px;
   outline: none;
 }
@@ -65,7 +65,7 @@ body {
   align-items: center;
   padding: 12px 20px;
   background-color: #ffffff;
-  border-bottom: 1px solid #eaeaea;
+  border-bottom: 1px solid #ffffff;
 }
 
 .logo {
@@ -88,7 +88,7 @@ body {
 .language-selector {
   display: flex;
   align-items: center;
-  background: #f0f4fb;
+  background: #f7f7f7;
   border-radius: 999px;
   padding: 5px 10px;
   cursor: pointer;
@@ -117,7 +117,7 @@ body {
 .toggle-label {
   width: 48px;
   height: 26px;
-  background-color: #333;
+  background-color: #ffffff;
   border-radius: 999px;
   display: flex;
   align-items: center;
@@ -138,8 +138,8 @@ body {
 
 .download-app-btn {
   display: inline-block;
-  background-color: #333;
-  color: #fff;
+  background-color: #ffffff;
+  color: #000000;
   padding: 6px 14px;
   border-radius: 999px;
   font-size: 0.9rem;
@@ -148,7 +148,7 @@ body {
 }
 
 .download-app-btn:hover {
-  background-color: #555;
+  background-color: #e60000;
 }
 
 
