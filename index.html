@@ -124,8 +124,9 @@
 </section>
 
 <script>
-  if (navigator.userAgent.includes("SnapApp")) {
-    document.body.classList.add("is-app");
+  const isInApp = navigator.userAgent.includes("SnapthApp");
+  if (isInApp) {
+    document.querySelector('.header-controls').style.display = 'none';
   }
 </script>
 
