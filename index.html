@@ -22,6 +22,18 @@
     <span class="arrow">&#9662;</span>
 
 <script src="/path/to/env-handler.js"></script>
+/* ẩn faq bên app */
+<script>
+  if (navigator.userAgent.includes("SnapthApp")) {
+    document.addEventListener("DOMContentLoaded", function () {
+      const introSection = document.querySelector(".content-section");
+      const faqSection = document.querySelector(".faq-section");
+
+      if (introSection) introSection.style.display = "none";
+      if (faqSection) faqSection.style.display = "none";
+    });
+  }
+</script>
 
 
     <a href="https://yourappdownloadlink.com" class="download-app-btn" target="_blank">
@@ -76,18 +88,6 @@
 <script>
      (adsbygoogle = window.adsbygoogle || []).push({});
 </script>
-
-<!-- Quảng cáo 2 -->
-<ins class="adsbygoogle"
-     style="display:block; text-align:center;"
-     data-ad-layout="in-article"
-     data-ad-format="fluid"
-     data-ad-client="ca-pub-6805310432922514"
-     data-ad-slot="5030394381"></ins>
-<script>
-     (adsbygoogle = window.adsbygoogle || []).push({});
-</script>
-
 
   <script src="main.js"></script>
  
