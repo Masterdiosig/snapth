@@ -1,0 +1,18 @@
+/* dark-theme.css */
+body {
+  background-color: #121212;
+  color: #ffffff;
+}
+
+input,
+button {
+  background-color: #1e1e1e;
+  color: #fff;
+  border-color: #333;
+}
+
+/* tuỳ chỉnh theo layout bạn có */
+.download-app-btn {
+  background-color: #222;
+  color: #eee;
+}

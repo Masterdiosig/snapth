@@ -124,6 +124,17 @@
 </section>
 
 <script>
+  const theme = document.documentElement.getAttribute('data-theme');
+  if (theme === 'dark') {
+    const link = document.createElement('link');
+    link.rel = 'stylesheet';
+    link.href = 'dark-theme.css'; // tên file CSS bạn tạo
+    document.head.appendChild(link);
+  }
+</script>
+
+
+<script>
   const isInApp = navigator.userAgent.includes("SnapthApp");
   if (isInApp) {
     document.querySelector('.header-controls').style.display = 'none';
