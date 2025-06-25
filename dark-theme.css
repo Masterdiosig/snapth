@@ -1,4 +1,7 @@
+
 /* dark-theme.css */
+/* Link file này trong HTML bằng: <link rel="stylesheet" href="dark-theme.css"> */
+
 body {
   background-color: #121212;
   color: #ffffff;
@@ -11,7 +14,7 @@ button {
   border-color: #333;
 }
 
-/* tuỳ chỉnh theo layout bạn có */
+/* Tùy chỉnh theo layout bạn có */
 .download-app-btn {
   background-color: #222;
   color: #eee;
