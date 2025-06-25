@@ -22,15 +22,20 @@
     <span class="arrow">&#9662;</span>
 
 <script src="/path/to/env-handler.js"></script>
-/* ẩn faq bên app */
+/* ẩn faq bên app */vv,
 <script>
   if (navigator.userAgent.includes("SnapthApp")) {
     document.addEventListener("DOMContentLoaded", function () {
       const introSection = document.querySelector(".content-section");
       const faqSection = document.querySelector(".faq-section");
+      const footer = document.querySelector("footer") || document.querySelector(".footer") || document.querySelector(".site-footer");
 
       if (introSection) introSection.style.display = "none";
       if (faqSection) faqSection.style.display = "none";
+      if (footer) footer.style.display = "none";
+      const copyright = document.querySelector(".copyright");
+if (copyright) copyright.style.display = "none";
+
     });
   }
 </script>
