@@ -19,3 +19,11 @@ button {
   background-color: #222;
   color: #eee;
 }
+body.dark-theme .logo {
+  color: #FF9100;
+  font-weight: bold;
+  filter: none;
+}
+body.dark-theme .dot-app {
+  color: red;
+}
