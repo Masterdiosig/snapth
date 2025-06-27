@@ -1,0 +1,45 @@
+.custom-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #111;
+  color: #fff;
+  padding: 10px 20px;
+  font-family: sans-serif;
+}
+
+.logo span {
+  color: orange;
+}
+
+.header-controls button {
+  background: none;
+  border: none;
+  color: white;
+  font-size: 22px;
+  margin-left: 15px;
+  cursor: pointer;
+}
+
+.hidden-menu {
+  display: none;
+  background: #222;
+  padding: 10px;
+}
+
+.hidden-menu ul {
+  list-style: none;
+  padding: 0;
+}
+
+.hidden-menu ul li a {
+  color: white;
+  text-decoration: none;
+  display: block;
+  padding: 5px 0;
+}
+
+.dark-mode {
+  background-color: #000;
+  color: #fff;
+}

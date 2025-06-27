@@ -12,46 +12,53 @@
   <link rel="shortcut icon" href="https://masterdiosig.github.io/snapth/snapth.png" type="image/x-icon"/>
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css"/>
 
-<!-- Yandex.RTB -->
-<script>window.yaContextCb=window.yaContextCb||[]</script>
-<script src="https://yandex.ru/ads/system/context.js" async></script>
+<!-- c1x -->
+ <link rel="stylesheet" href="menu.css">
 
-<header class="top-header">
-  <div class="logo">Snapth<span class="dot-app">.top</span></div>
+<header class="custom-header">
+  <div class="logo">Snapth<span>.top</span></div>
 
-  <!-- Language Selector -->
-<div class="header-controls">
-  <div class="language-selector">
-    <img src="https://flagcdn.com/id.svg" alt="Indonesia" class="flag-icon">
-    <span>Indonesia</span>
-    <span class="arrow">&#9662;</span>
+  <div class="header-controls">
+    <!-- Nút dark/light -->
+    <button id="toggle-theme" aria-label="Toggle theme">🌙</button>
 
-<script src="/path/to/env-handler.js"></script>
-<!-- ẩn faq bên app -->
+    <!-- Nút menu -->
+    <button id="menu-btn" aria-label="Menu">☰</button>
+  </div></header>
+
+
+<!-- Menu ẩn -->
+<nav id="dropdown-menu" class="hidden-menu">
+  <ul>
+    <li><a href="/">Home</a></li>
+    <li><a href="/how-to-use">How to Use</a></li>
+    <li><a href="/faq">FAQ</a></li>
+    <li><a href="/contact">Contact</a></li>
+    <li><a href="/tiktok-downloader">TikTok Downloader</a></li>
+  </ul>
+</nav>
+
+<!-- c1js -->
+
 <script>
-  if (navigator.userAgent.includes("SnapthApp")) {
-    document.addEventListener("DOMContentLoaded", function () {
-      const introSection = document.querySelector(".content-section");
-      const faqSection = document.querySelector(".faq-section");
-      const footer = document.querySelector("footer") || document.querySelector(".footer") || document.querySelector(".site-footer");
+  const toggleThemeBtn = document.getElementById("toggle-theme");
+  const menuBtn = document.getElementById("menu-btn");
+  const menu = document.getElementById("dropdown-menu");
 
-      if (introSection) introSection.style.display = "none";
-      if (faqSection) faqSection.style.display = "none";
-      if (footer) footer.style.display = "none";
-      const copyright = document.querySelector(".copyright");
-if (copyright) copyright.style.display = "none";
+  // Dark/Light Mode
+  toggleThemeBtn.onclick = () => {
+    document.body.classList.toggle("dark-mode");
+    toggleThemeBtn.textContent = document.body.classList.contains("dark-mode") ? "☀️" : "🌙";
+  };
 
-    });
-  }
+  // Toggle menu
+  menuBtn.onclick = () => {
+    menu.style.display = menu.style.display === "block" ? "none" : "block";
+  };
 </script>
+<!-- c1h -->
 
-
-    <a href="https://yourappdownloadlink.com" class="download-app-btn" target="_blank">
-      📲 Download
-    </a>
-  </div>
-</header>
-
+<!-- c2 -->
 
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-G1KEL35P4L"></script>
@@ -101,58 +108,44 @@ if (copyright) copyright.style.display = "none";
 
   <script src="main.js"></script>
 
-  <!-- Yandex.RTB R-A-16032247-1 -->
-<script>
-window.yaContextCb.push(() => {
-    Ya.Context.AdvManager.render({
-        "blockId": "R-A-16032247-1",
-        "type": "topAd"
-    })
-})
-</script>
- 
+
 <link rel="stylesheet" href="faq.css">
 <section class="content-section">
   <div class="faq-item">
-    <h2>Cara mengunduh video TikTok tanpa logo menggunakan Snapth.top</h2>
-    <p>
-      Apakah Anda ingin <strong>mengunduh video TikTok tanpa logo</strong>, tanpa tanda air?
-      Snapth.top membantu Anda melakukannya dengan sangat mudah dan cepat. Cukup ikuti 3 langkah berikut:
-    </p>
-    <ol>
-      <li>
-        <strong>Salin tautan video TikTok:</strong> Buka TikTok, pilih video, klik "Bagikan" → "Salin tautan".
-      </li>
-      <li>
-        <strong>Tempel tautan ke SnapTok:</strong> Buka
-        <a href="https://www.snapth.top" target="_blank">Snapth.top</a>
-        dan tempel tautan ke kotak pencarian.
-      </li>
-      <li>
-        <strong>Tekan tombol Unduh:</strong> Sistem akan memproses secara otomatis dan Anda dapat mengunduh video
-        <b>tanpa logo</b> dengan segera.
-      </li>
-    </ol>
-    <p>
-      Tidak perlu menginstal aplikasi, tidak perlu login. Berfungsi dengan baik di iPhone, Android, dan PC!
-    </p>
-  </div>
-</section>
+    <h2>How to download TikTok videos without logo using Snapth.top</h2>
+<p>
+Do you want to <strong>download TikTok videos without logo</strong>, without watermark?
+Snapth.top helps you do it very easily and quickly. Just follow these 3 steps:
+</p>
+<ol>
+<li>
+<strong>Copy TikTok video link:</strong> Open TikTok, select a video, click "Share" → "Copy link".
+</li>
+<li>
+<strong>Paste the link to SnapTok:</strong> Open
+<a href="https://www.snapth.top" target="_blank">Snapth.top</a>
+and paste the link into the search box.
+</li>
+<li>
+<strong>Press the Download button:</strong> The system will process automatically and you can download the video
+<b>without logo</b> immediately.
+</li></ol>
+<p>No app installation, no login required. Works great on iPhone, Android and PC!</p>
 
-<section class="faq-section">
-<div class="container">
-<h2>❓ Pertanyaan yang Sering Diajukan (FAQ)</h2>
-<h3>Apakah Snapth.top gratis?</h3>
-<p>✔️ Ya! Alat ini sepenuhnya gratis dan tidak ada batasan jumlah unduhan per hari.</p>
 
-<h3>Apakah Anda mengunduh video TikTok dengan logo?</h3>
-<p>❌ Tidak! Snapth.top mendukung pengunduhan video <strong>tanpa logo</strong> (tanpa tanda air) agar dapat digunakan kembali sesuai keinginan.</p>
 
-<h3>Apakah saya perlu masuk ke akun TikTok saya?</h3>
-<p>❌ Tidak perlu masuk. Anda hanya perlu menempelkan tautan video publik dari TikTok untuk segera mengunduhnya.</p>
+<h2>❓ Frequently Asked Questions (FAQ)</h2>
+<h3>Is Snapth.top free?</h3>
+<p>✔️ Yes! This tool is completely free and there is no limit to the number of downloads per day.</p>
 
-<h3>Dapatkah saya menggunakan Snapth.top di iPhone?</h3>
-<p>✔️ Tentu saja. Snapth.top berfungsi dengan baik di peramban Safari, Chrome, Firefox di komputer dan ponsel.</p>
+<h3>Do you download TikTok videos with logo?</h3>
+<p>❌ No! Snapth.top supports downloading videos <strong>without logo</strong> (without watermark) for reuse as desired.</p>
+
+<h3>Do I need to log in to my TikTok account?</h3>
+<p>❌ No need to log in. You just need to paste the public video link from TikTok to download it immediately.</p>
+
+<h3>Can I use Snapth.top on iPhone?</h3>
+<p>✔️ Of course. Snapth.top works well on Safari, Chrome, Firefox browsers on both computers and mobile phones.</p>
   </div>
 </section>
 
@@ -182,9 +175,9 @@ window.yaContextCb.push(() => {
 <footer style="margin-top: 40px; text-align: center; font-size: 14px; color: #777;">
   <p>© 2025 <strong>Snapth.top</strong>. All rights reserved.</p>
   <p>
-    <a href="about.html">Memperkenalkan</a> • 
-    <a href="privacy.html">Kebijakan</a> • 
-    <a href="mailto:snapth.top@gmail.com">Kontak</a>
+    <a href="about.html">About</a> • 
+    <a href="privacy.html">Privacy</a> • 
+    <a href="mailto:snapth.top@gmail.com">Contact</a>
   </p><p></p>
 </footer>
 <strong></strong>
