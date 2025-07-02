@@ -162,10 +162,12 @@ and paste the link into the search box.
 
 <!-- âz 2025 -->
 <script>
-  const isInApp = navigator.userAgent.includes("SnapthApp");
-  if (isInApp) {
-    document.body.classList.add("is-app");
-  }
+  window.addEventListener('DOMContentLoaded', function () {
+    const isInApp = navigator.userAgent.includes("SnapthApp");
+    if (isInApp) {
+      document.body.classList.add("is-app");
+    }
+  });
 </script>
 
   

@@ -172,12 +172,12 @@ a:hover {
 body.is-app .footer,
 body.is-app .site-info,
 body.is-app .chinh-sach,
-body.is-app .copyright
+body.is-app .copyright,
 body.is-app .header,
-body.is-app .footer,
 body.is-app .ads {
   display: none !important;
 }
+
 
 
 .custom-header {
