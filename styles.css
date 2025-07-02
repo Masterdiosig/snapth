@@ -182,11 +182,11 @@ body.is-app .ads {
   left: 0;
   width: 100%;
   z-index: 1000;
-  background-color: #ffffff;
-  border-bottom: 1px solid #eee;
+  background-color: #441010;
+  border-bottom: 1px solid #4e0b0b;
 }
 
 /* Thêm khoảng trống bên dưới header để không bị đè nội dung */
 body {
-  padding-top: 60px; /* hoặc đúng chiều cao header của bạn */
+  padding-top: 20px; /* hoặc đúng chiều cao header của bạn */
 }
