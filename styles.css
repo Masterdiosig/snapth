@@ -182,8 +182,8 @@ body.is-app .ads {
   left: 0;
   width: 100%;
   z-index: 1000;
-  background-color: #441010;
-  border-bottom: 1px solid #4e0b0b;
+  background-color: #000000;
+  border-bottom: 1px solid #000000;
 }
 
 /* Thêm khoảng trống bên dưới header để không bị đè nội dung */
