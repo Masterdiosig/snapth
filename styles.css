@@ -168,7 +168,11 @@ a:hover {
   text-decoration: underline;
 }
 
-
+/* ẩn © 2025 Snapth.top và rt  */
+body.is-app .footer,
+body.is-app .site-info,
+body.is-app .chinh-sach,
+body.is-app .copyright
 body.is-app .header,
 body.is-app .footer,
 body.is-app .ads {
