@@ -1,13 +1,3 @@
-.header {
-  position: fixed;          /* giữ cố định */
-  top: 0;
-  left: 0;
-  width: 100%;
-  z-index: 9999;
-  background-color: #111;   /* hoặc màu bạn đang dùng */
-  padding: 16px;
-}
-
 
 body {
 
@@ -185,3 +175,18 @@ body.is-app .ads {
   display: none !important;
 }
 
+
+.top-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  background-color: #ffffff;
+  border-bottom: 1px solid #eee;
+}
+
+/* Thêm khoảng trống bên dưới header để không bị đè nội dung */
+body {
+  padding-top: 60px; /* hoặc đúng chiều cao header của bạn */
+}
