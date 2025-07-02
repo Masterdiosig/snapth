@@ -155,7 +155,7 @@ and paste the link into the search box.
   if (theme === 'dark') {
     const link = document.createElement('link');
     link.rel = 'stylesheet';
-    link.href = 'dark-theme.css'; // 
+    link.href = 'dark-theme.css'; //
     document.head.appendChild(link);
   }
 </script>
@@ -163,15 +163,36 @@ and paste the link into the search box.
 <!-- âz 2025 -->
 <script>
   window.addEventListener('DOMContentLoaded', function () {
-    const isInApp = navigator.userAgent.includes("SnapthApp");
-    if (isInApp) {
+    if (navigator.userAgent.includes("SnapthApp")) {
       document.body.classList.add("is-app");
     }
   });
 </script>
 
+<script>
+  // Kiểm tra nếu đang mở trong WebView
+  const isWebView = /SnapthApp|wv|WebView|iPhone|iPod|Android/i.test(navigator.userAgent);
+  if (isWebView) {
+    // Ẩn phần FAQ
+    const faqSection = document.querySelector('.content-section');
+    if (faqSection) {
+      faqSection.style.display = 'none';
+    }
 
-  
+    // Ẩn phần footer
+    const footer = document.querySelector('footer');
+    if (footer) {
+      footer.style.display = 'none';
+    }
+
+    // Xóa CSS nếu muốn
+    const faqCSS = document.querySelector('link[href="faq.css"]');
+    if (faqCSS) {
+      faqCSS.remove();
+    }
+  }
+</script>
+
 
 </body>
 </html>
@@ -181,8 +202,8 @@ and paste the link into the search box.
 <footer style="margin-top: 40px; text-align: center; font-size: 14px; color: #777;">
   <p>© 2025 <strong>Snapth.top</strong>. All rights reserved.</p>
   <p>
-    <a href="about.html">About</a> • 
-    <a href="privacy.html">Privacy</a> • 
+    <a href="about.html">About</a> •
+    <a href="privacy.html">Privacy</a> •
     <a href="mailto:snapth.top@gmail.com">Contact</a>
   </p><p></p>
 </footer>
