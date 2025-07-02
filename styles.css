@@ -176,17 +176,22 @@ body.is-app .ads {
 }
 
 
-.top-header {
+.custom-header {
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
   z-index: 1000;
-  background-color: #000000;
+  background-color: #ffffff;
   border-bottom: 1px solid #000000;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 20px;
 }
 
-/* Thêm khoảng trống bên dưới header để không bị đè nội dung */
+/* Bù lại chiều cao header để nội dung bên dưới không bị che */
 body {
-  padding-top: 20px; /* hoặc đúng chiều cao header của bạn */
+  padding-top: 20px; /* hoặc đúng chiều cao của .custom-header */
 }
+
