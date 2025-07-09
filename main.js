@@ -3,11 +3,11 @@ document.addEventListener("DOMContentLoaded", () => {
   const input = document.getElementById("hf_urli");
 
   form.addEventListener("submit", async (e) => {
-    e.preventDefault(); // ✅ Chặn form gửi POST trực tiếp
+    e.preventDefault(); // ✅ Chặn reload mặc định
 
     const tiktokUrl = input.value.trim();
     if (!tiktokUrl) {
-      alert("Vui lòng dán link TikTok!");
+      showErrorToast("Vui lòng dán link TikTok!");
       return;
     }
 
@@ -19,16 +19,18 @@ document.addEventListener("DOMContentLoaded", () => {
       });
 
       const data = await res.json();
+
       if (data.code === 0 && data.data.length > 0) {
-        // Mở link tải đầu tiên
+        // ✅ Mở link tải đầu tiên
         window.open(data.data[0].url, '_blank');
       } else {
-        alert(data.message || "Không lấy được video.");
+        showErrorToast(data.message || "Không lấy được video.");
       }
     } catch (err) {
       console.error(err);
-      alert("Lỗi gọi API hoặc server.");
+      showErrorToast("Video or server error.");
     }
   });
 });
+
 
