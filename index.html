@@ -19,13 +19,30 @@ body.dark-mode {
   --toast-bg: #333333;
   --toast-color: #f8d7da;
 }
-
-    @keyframes fadeInOut {
-      0% { opacity: 0; bottom: 0px; }
-      10% { opacity: 1; bottom: 20px; }
-      90% { opacity: 1; bottom: 20px; }
-      100% { opacity: 0; bottom: 0px; }
-    }
+@keyframes fadeInOut {
+  0% { opacity: 0; bottom: 0px; }
+  10% { opacity: 1; bottom: 20px; }
+  90% { opacity: 1; bottom: 20px; }
+  100% { opacity: 0; bottom: 0px; }
+}
+.simple_form {
+  position: relative;
+}
+#error-inline {
+  display: none;
+  position: absolute;
+  top: 48px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #f44336;
+  color: white;
+  padding: 8px 14px;
+  border-radius: 6px;
+  font-size: 14px;
+  white-space: nowrap;
+  z-index: 10;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+}
   </style>
 </head>
 <body>
@@ -48,60 +65,22 @@ body.dark-mode {
     </ul>
   </nav>
 
-
   <div class="hero_simple">
     <div class="container">
       <h1>Download Videos</h1>
       <p class="subtitle">Tidak ada logo – No watermark</p>
 
- <form class="simple_form" name="formurl">
+      <form class="simple_form" name="formurl">
         <input type="text" name="td_url" id="hf_urli" placeholder="Paste link here...">
+        <div id="error-inline">
+          ⚠️ <span id="error-inline-msg">Error occurred.</span>
+        </div>
         <button type="submit" name="td_btn"><i class="fa fa-download"></i> Unduh</button>
-
-<div id="error-inline" style="
-  display: none;
-  background-color: #f44336;
-  color: #fff;
-  margin-top: 10px;
-  padding: 8px 12px;
-  border-radius: 6px;
-  font-size: 14px;
-  animation: fadeIn 0.3s ease-in-out;
-">
-
-<style>
-.simple_form {
-  position: relative; /* để .error gắn bên trong */
-}
-
-#error-inline {
-  display: none;
-  position: absolute;
-  top: 48px; /* tuỳ chiều cao input */
-  left: 50%;
-  transform: translateX(-50%);
-  background-color: #f44336;
-  color: white;
-  padding: 8px 14px;
-  border-radius: 6px;
-  font-size: 14px;
-  white-space: nowrap;
-  z-index: 10;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.15);
-}
-</style>
-
-
-  ⚠️ <span id="error-inline-msg">Có lỗi xảy ra.</span>
-</div>
       </form>
-
-     
     </div>
   </div>
 
-
- <script src="main.js"></script>
+  <script src="main.js"></script>
 
   <div class="banner">
     <img src="huongdan.png" alt="User manual" style="width: 100%; max-width: 600px; display: block; margin: 0 auto;" onclick="return false;" />
@@ -123,10 +102,8 @@ body.dark-mode {
     animation: fadeInOut 4s forwards;
   ">
     <span id="error-toast-icon" style="margin-right: 8px;">⚠️</span>
-<span id="error-toast-msg">Có lỗi xảy ra. Vui lòng thử lại.</span>
+    <span id="error-toast-msg">Something went wrong. Please try again.</span>
   </div>
-
-
 
   <script>
     const toggleThemeBtn = document.getElementById("toggle-theme");
