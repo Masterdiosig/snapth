@@ -39,7 +39,7 @@ document.addEventListener("DOMContentLoaded", () => {
       }
     } catch (err) {
       console.error(err);
-      showErrorInline("Error video or server.");
+      showErrorInline("h.");
     }
   });
 });
