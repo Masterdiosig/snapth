@@ -2,12 +2,23 @@ document.addEventListener("DOMContentLoaded", () => {
   const form = document.querySelector(".simple_form");
   const input = document.getElementById("hf_urli");
 
+  // Hàm hiện lỗi ngay dưới ô nhập
+  function showErrorInline(message) {
+    const box = document.getElementById("error-inline");
+    const msg = document.getElementById("error-inline-msg");
+    msg.textContent = message;
+    box.style.display = "block";
+    setTimeout(() => {
+      box.style.display = "none";
+    }, 4000);
+  }
+
   form.addEventListener("submit", async (e) => {
     e.preventDefault(); // ✅ Chặn reload mặc định
 
     const tiktokUrl = input.value.trim();
     if (!tiktokUrl) {
-      showErrorToast("Vui lòng dán link TikTok!");
+      showErrorInline("Vui lòng dán link TikTok!");
       return;
     }
 
@@ -21,16 +32,17 @@ document.addEventListener("DOMContentLoaded", () => {
       const data = await res.json();
 
       if (data.code === 0 && data.data.length > 0) {
-        // ✅ Mở link tải đầu tiên
         window.open(data.data[0].url, '_blank');
       } else {
-        showErrorToast(data.message || "Không lấy được video.");
+        showErrorInline(data.message || "Không lấy được video.");
       }
     } catch (err) {
       console.error(err);
-      showErrorToast("Video or server error.");
+      showErrorInline("Lỗi server khi gọi RapidAPI.");
     }
   });
 });
+
+
 
 
