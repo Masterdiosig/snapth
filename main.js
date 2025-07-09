@@ -35,7 +35,8 @@ document.addEventListener("DOMContentLoaded", () => {
       if (data.code === 0 && data.data.length > 0) {
         window.open(data.data[0].url, '_blank');
       } else {
-        showErrorInline(data.message || "Không lấy được video.");
+        showErrorInline(data.message || "Cannot get video.");
+
       }
     } catch (err) {
       console.error(err);
