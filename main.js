@@ -18,7 +18,8 @@ document.addEventListener("DOMContentLoaded", () => {
 
     const tiktokUrl = input.value.trim();
     if (!tiktokUrl) {
-      showErrorInline("Vui lòng dán link TikTok!");
+      showErrorInline("Paste valid link!");
+       input.focus();
       return;
     }
 
