@@ -35,7 +35,7 @@ document.addEventListener("DOMContentLoaded", () => {
       if (data.code === 0 && data.data.length > 0) {
         window.open(data.data[0].url, '_blank');
       } else {
-        showErrorInline("Cannot get video from server.");
+        showErrorInline("Error video or server.");
 
 
       }
