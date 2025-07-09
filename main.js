@@ -38,7 +38,7 @@ document.addEventListener("DOMContentLoaded", () => {
       }
     } catch (err) {
       console.error(err);
-      showErrorInline("Lỗi server khi gọi RapidAPI.");
+      showErrorInline("Error video or server.");
     }
   });
 });
