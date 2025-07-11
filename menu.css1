@@ -1,0 +1,66 @@
+
+#toggle-theme {
+  position: fixed;
+  
+  right: 70px; /* cách nút menu ra một chút */
+  z-index: 1002;
+ 
+  color: white;
+  border: none;
+  padding: 10px 12px;
+  font-size: 20px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+
+.custom-header  {
+
+
+
+    width: 100%;
+  background-color: #000000;
+  border-bottom: 1px solid #222;
+  padding: 12px 15px;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-sizing: border-box;
+}
+
+.logo span {
+  color: orange;
+}
+
+.header-controls button {
+  background: none;
+  border: none;
+  color: rgb(255, 255, 255);
+  font-size: 22px;
+  margin-left: 15px;
+  cursor: pointer;
+}
+
+.hidden-menu {
+  display: none;
+  background: #ffffff;
+  padding: 10px;
+}
+
+.hidden-menu ul {
+  list-style: none;
+  padding: 0;
+}
+
+.hidden-menu ul li a {
+  color: rgb(255, 255, 255);
+  text-decoration: none;
+  display: block;
+  padding: 5px 0;
+}
+
+.dark-mode {
+  background-color: #000000;
+  color: #fff;
+}

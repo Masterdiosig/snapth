@@ -1,51 +1,33 @@
-.custom-header  {
-  position: fixed;
-  top: 0;
-  left: 0;
+.custom-header {
   width: 100%;
-  z-index: 1000;
-  background-color: #111;
+  background-color: #000000;
   border-bottom: 1px solid #222;
-  padding: 12px 16px;
-
+  padding: 12px 15px;
   display: flex;
   justify-content: space-between;
   align-items: center;
   box-sizing: border-box;
+  position: relative;
+  z-index: 1000;
 }
 
 .logo span {
   color: orange;
 }
 
-.header-controls button {
-  background: none;
+.header-controls {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+#toggle-theme,
+.menu-button {
+  background-color: black;
+  color: white;
   border: none;
-  color: white;
-  font-size: 22px;
-  margin-left: 15px;
+  padding: 8px 103px;
+  font-size: 20px;
+  border-radius: 6px;
   cursor: pointer;
-}
-
-.hidden-menu {
-  display: none;
-  background: #222;
-  padding: 10px;
-}
-
-.hidden-menu ul {
-  list-style: none;
-  padding: 0;
-}
-
-.hidden-menu ul li a {
-  color: white;
-  text-decoration: none;
-  display: block;
-  padding: 5px 0;
-}
-
-.dark-mode {
-  background-color: #000;
-  color: #fff;
 }
