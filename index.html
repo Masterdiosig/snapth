@@ -29,16 +29,19 @@ body.dark-mode {
   </style>
 </head>
 <body>
-  <header class="custom-header">
-    <div class="logo">Snapth<span>.top</span></div>
-    <div class="header-controls">
 
-  <button id="toggle-theme">🌙</button>
-  <button class="menu-button" onclick="toggleMenu()">☰</button>
-    </div>
-  </header>  
-    
-  <style>
+
+
+<header class="custom-header">
+  <link rel="stylesheet" href="menu.css">
+  <div class="logo">Snapth<span>.top</span></div>
+  <div class="header-controls">
+    <button id="toggle-theme" class="header-button">🌙</button>
+    <button class="menu-button header-button" onclick="toggleMenu()">☰</button>
+  </div>
+</header>
+
+<style>
     * {
       margin: 0;
       padding: 0;
@@ -57,7 +60,7 @@ body.dark-mode {
       background-color: black;
       color: white;
       border: none;
-      padding: 10px 12px;
+      padding: 1px 12px;
       font-size: 20px;
       border-radius: 6px;
       z-index: 1001;
@@ -142,11 +145,11 @@ body.dark-mode {
       white-space: nowrap;
     }
   </style>
+
+    
+  
 </head>
 <body>
-
-
-
   <!-- Menu xổ -->
   <div class="dropdown-menu" id="dropdownMenu">
     <!-- How to Use -->
