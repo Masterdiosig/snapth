@@ -17,8 +17,36 @@ const followRedirect = async (shortUrl) => {
 };
 
 const handler = async (req, res) => {
-  res.setHeader("Access-Control-Allow-Origin", "*");
+  const allowedOrigin = 'https://snapth.vercel.app';
+  const secretToken = process.env.API_SECRET_TOKEN; // Đặt trong .env
+  const origin = req.headers.origin || req.headers.referer || '';
+  const authHeader = req.headers.authorization || '';
+  const token = authHeader.replace('Bearer ', '').trim();
 
+  // ✅ CORS
+  res.setHeader("Access-Control-Allow-Origin", allowedOrigin);
+  res.setHeader("Vary", "Origin");
+  res.setHeader("Access-Control-Allow-Methods", "POST, OPTIONS");
+  res.setHeader("Access-Control-Allow-Headers", "Content-Type, Authorization");
+
+  // ✅ OPTIONS request (preflight)
+  if (req.method === 'OPTIONS') {
+    return res.status(200).end();
+  }
+
+  // 🔐 Kiểm tra domain gọi API
+  if (!origin.startsWith(allowedOrigin)) {
+    console.warn('⛔ Bị chặn: sai domain:', origin);
+    return res.status(403).json({ error: 'Forbidden - Invalid origin' });
+  }
+
+  // 🔐 Kiểm tra token
+  if (token !== secretToken) {
+    console.warn('⛔ Bị chặn: sai token:', token);
+    return res.status(403).json({ error: 'Forbidden - Invalid token' });
+  }
+
+  // ✅ Chỉ cho phép POST
   if (req.method !== 'POST') {
     return res.status(405).json({ error: 'Method not allowed' });
   }
